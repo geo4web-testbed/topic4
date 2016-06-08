@@ -1551,11 +1551,11 @@ h6 {
       </tr>
       <tr class="c13">
         <td class="c31" colspan="1" rowspan="1"><p class="c22 c0"><span class="c34 c29">series</span></p></td>
-        <td class="c42" colspan="1" rowspan="1"><p class="c22 c0"><span class="c2 c29"><a class="c7" href="http://schema.org/Dataset">http://schema.org/DataCatalog</a></span><span class="c34 c29">&nbsp;</span></p></td>
+        <td class="c42" colspan="1" rowspan="1"><p class="c22 c0"><span class="c2 c29"><a class="c7" href="http://schema.org/Dataset">http://bib.schema.org/Collection</a></span><span class="c34 c29">&nbsp;</span></p></td>
       </tr>
       <tr class="c13">
         <td class="c31" colspan="1" rowspan="1"><p class="c22 c0"><span class="c34 c29">service</span></p></td>
-        <td class="c42" colspan="1" rowspan="1"><p class="c22 c0"><span class="c2 c29"><a class="c7" href="http://schema.org/Dataset">http://schema.org/DataCatalog</a></span><span class="c34 c29">&nbsp;</span></p></td>
+        <td class="c42" colspan="1" rowspan="1"><p class="c22 c0"><span class="c2 c29"><a class="c7" href="http://schema.org/Dataset">http://schema.org/Service</a></span><span class="c34 c29">&nbsp;</span></p></td>
       </tr>
       <tr class="c13">
         <td class="c31" colspan="1" rowspan="1"><p class="c22 c0"><span class="c34 c29">application</span></p></td>
@@ -1605,13 +1605,11 @@ h6 {
   <p class="c0">
   <span>
   For quite some of the hierarchylevels no suitable classes are available in
-  schema.org, creating a schema.org extension or using one of the available extensions, such as the
-  web-observatory extension may make sense. In the scope of this research only metadata describing
+  schema.org, creating a schema.org extension or using one of the available extensions may make sense. 
+  In the scope of this research only metadata describing
   datasets, services and series is relevant. Other hierarchy levels are not commonly used in the
-  current national spatial data infrastructure. Schema.org does not have a concept for dataset series 
-  and service metadata. A potential
-  approach is to model the series and service as a catalogue of Datasets. In stead GeoDCAT-ap suggests to model a
-  service for example as a <a href="http://dublincore.org/documents/dcmi-terms/#dcmitype-Service">dctype:service</a>. 
+  current national spatial data infrastructure. Schema.org does not have an exact matching concept for dataset series. A potential
+  approach is to model the series as bib:Collection. 
   </span></p>
 
   <p class="c0"><span>Dataset descriptions structured as ISO 19139 map quite well on
