@@ -466,7 +466,7 @@ h6 {
 
   <p class="c0 c38"><span class="c2"><a class="c7" href="#h.slcmhsi0iksl">Schema.org</a></span></p>
 
-  <p class="c0 c38"><span class="c2"><a class="c7" href="#h.u8ras5wy1peo">GeoDCAT-AP</a></span></p>
+  <p class="c0 c38"><span class="c2"><a class="c7" href="#h.u8ras5wy1peo">GeoDCAT-ap</a></span></p>
 
   <p class="c0 c38"><span class="c2"><a class="c7" href="#h.qah4wfgawhhl">URI
   strategy</a></span></p>
@@ -502,7 +502,7 @@ h6 {
   Spatial Data on the Web best practices in the WFS proxy</a></span></p>
 
   <p class="c0 c38"><span class="c2"><a class="c7" href="#h.hx52qgd16l66">Appendix C: Example of an
-  ISO 19139 document transformed to GeoDCAT-AP</a></span></p>
+  ISO 19139 document transformed to GeoDCAT-ap</a></span></p>
 
   <h1 class="c0 c12" id="h.jjow84nwj1hs"><span>Abstract</span></h1>
 
@@ -542,7 +542,7 @@ h6 {
     <li class="c15 c0"><span>the resources that are made available by the proxies,</span></li>
 
     <li class="c15 c0"><span>the mapping of the data and metadata resources to the schema.org
-    vocabulary (plus the GeoDCAT-AP vocabulary for metadata),</span></li>
+    vocabulary (plus the GeoDCAT-ap vocabulary for metadata),</span></li>
 
     <li class="c15 c0"><span>our strategy for assigning URIs to the resources,</span></li>
 
@@ -800,7 +800,7 @@ h6 {
     <li class="c15 c0"><span>the mapping of the data and metadata resources to the identified
     vocabularies,</span> <span class="c2"><a class="c7" href=
     "#h.slcmhsi0iksl">schema.org</a></span><span>&nbsp;and</span> <span class="c2"><a class="c7"
-    href="#h.u8ras5wy1peo">GeoDCAT-AP</a></span></li>
+    href="#h.u8ras5wy1peo">GeoDCAT-ap</a></span></li>
 
     <li class="c0 c15"><span>the strategy for</span> <span class="c2"><a class="c7" href=
     "#h.qah4wfgawhhl">assigning URIs</a></span><span>&nbsp;to the resources</span></li>
@@ -1539,7 +1539,7 @@ h6 {
 
   <p class="c0"><span>As part of ISO 19115 the hierarchyLevel element determines the type of object
   described in the metadata. The available types are listed in the <a href="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml">ScopeCode</a> codelist of ISO 19115. For each
-  of these concepts a different schema.org class can be used.</span></p>
+  of these concepts a different schema.org class should be used.</span></p>
 
   <p class="c0"/>
   
@@ -1579,7 +1579,7 @@ h6 {
       </tr>
       <tr class="c13">
         <td class="c31" colspan="1" rowspan="1"><p class="c22 c0"><span class="c34 c29">model</span></p></td>
-        <td class="c42" colspan="1" rowspan="1"><p class="c22 c0"><span class="c2 c29"><a class="c7" href="http://schema.org/Dataset">http://schema.org/APIReference</a></span><span class="c34 c29">&nbsp;</span></p></td>
+        <td class="c42" colspan="1" rowspan="1"><p class="c22 c0"><span class="c2 c29">?</span><span class="c34 c29">&nbsp;</span></p></td>
       </tr>
       <tr class="c13">
         <td class="c31" colspan="1" rowspan="1"><p class="c22 c0"><span class="c34 c29">tile</span></p></td>
@@ -1602,14 +1602,17 @@ h6 {
 
   <p class="c0"/>
 
-  <p class="c0"><span>Schema.org does not have a concept for series and service metadata. A viable
-  approach is to model the series and service as a list of Datasets. GeoDCAT-AP suggests to model a
-  service as a dcat:catalogue. We suggest to model the series and service in schema.org in a
-  similar way. For quite some of the hierarchylevels no suitable classes are available in
+  <p class="c0">
+  <span>
+  For quite some of the hierarchylevels no suitable classes are available in
   schema.org, creating a schema.org extension or using one of the available extensions, such as the
   web-observatory extension may make sense. In the scope of this research only metadata describing
   datasets, services and series is relevant. Other hierarchy levels are not commonly used in the
-  current national spatial data infrastructure.</span></p>
+  current national spatial data infrastructure. Schema.org does not have a concept for dataset series 
+  and service metadata. A potential
+  approach is to model the series and service as a catalogue of Datasets. In stead GeoDCAT-ap suggests to model a
+  service for example as a <a href="http://dini-ag-kim.github.io/service-ontology/service.html">dctype:service</a>. 
+  </span></p>
 
   <p class="c0"><span>Dataset descriptions structured as ISO 19139 map quite well on
   Schema.org/Dataset. Most obvious missing properties are typical spatial properties such as
@@ -1871,7 +1874,7 @@ h6 {
   "width: 570.00px; height: 383.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
   title="" /></span></p>
 
-  <h1 class="c0 c12" id="h.u8ras5wy1peo"><span>GeoDCAT-AP</span></h1>
+  <h1 class="c0 c12" id="h.u8ras5wy1peo"><span>GeoDCAT-ap</span></h1>
 
   <p class="c0"><span>A proxy approach as described in this report can also be applied to
   facilitate spatial data discovery from the linked data community. The proxies should be
@@ -1880,33 +1883,34 @@ h6 {
   the linked data domain is</span> <span class="c2"><a class="c7" href="https://www.w3.org/TR/vocab-dcat/">
   DCAT</a></span><span>.</span></p>
 
-  <p class="c0"><span class="c2"><a class="c7" href="https://joinup.ec.europa.eu/asset/dcat_application_profile/asset_release/geodcat-ap-v10">
-  GeoDCAT-AP</a></span><span>&nbsp;is an extension on DCAT and</span> <span class="c2"><a class=
-  "c7" href="https://www.w3.org/TR/prov-overview/">
-  PROV</a></span><span>&nbsp;developed in the scope of <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/asset_release/geodcat-ap-v10">joinup</a>, to provide an ontology to
-  express the full richness of INSPIRE metadata encoded according to ISO 19139. Initially the goal
-  of the GeoDCAT-AP initiative was to facilitate discovery of INSPIRE data in the open data domain.
-  But recent discussions tend to promote GeoDCAT-AP as an alternative metadata format within an
-  <a href="http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.0.pdf">INSPIRE discovery service</a>.</span></p>
+  <p class="c0"><span class="c2"><a class="c7" href="https://joinup.ec.europa.eu/asset/dcat_application_profile/asset_release/GeoDCAT-ap-v10">
+  GeoDCAT-ap</a> is an extension on DCAT and PROV developed in the framework of the <a href="http://ec.europa.eu/isa/">EU ISA Programme</a>, 
+  to provide an ontology to express the full richness of INSPIRE metadata encoded according to ISO 19139. 
+  Initially the goal of the GeoDCAT-ap initiative was to facilitate discovery of INSPIRE data in the open data domain. 
+  But recent discussions tend to promote GeoDCAT-ap as an alternative metadata format within an <a href="http://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.0.pdf">INSPIRE discovery service</a>.
+  </span></p>
 
   <h2 class="c0 c12" id="h.dv3d82yv8xo2"><span>Mapping of metadata records to</span>
-  <span>GeoDCAT-AP</span></h2>
+  <span>GeoDCAT-ap</span></h2>
 
-  <p class="c0"><span>Joinup released, together with the GeoDCAT-AP specification, an XSLT which
-  can transform ISO 19139 metadata to GeoDCAT-AP. We’ve used this XSLT to improve existing RDF
+
+
+  <p class="c0"><span>
+  Together with the GeoDCAT-AP specification, an XSLT has been released which can transform ISO 19139 metadata to GeoDCAT-AP.
+  We’ve used this XSLT to improve existing RDF
   export capabilities in GeoNetwork. Until recently RDF/XML could only be exported from GeoNetwork
   using an RSS type of search. In recent versions RDF/XML can also be exported using CSW and as a
   full catalog dump. Only RDF/XML is supported, no transformations to turtle or json-ld are
   currently available.</span></p>
 
-  <p class="c0"><span>The Joinup XSLT has been improved on a number of aspects.</span></p>
+  <p class="c0"><span>The GeoDCAT-ap XSLT has been improved on a number of aspects.</span></p>
 
   <ul class="c33.lst-kix-0 start">
-    <li class="c15 c0"><span>The Joinup XSLT tends to create frequent ‘blank nodes’, which is not
+    <li class="c15 c0"><span>The GeoDCAT-ap XSLT tends to create frequent ‘blank nodes’, which is not
     forbidden, but a bad practice in linked data. Instead GeoNetwork ‘mints’ uri’s for new objects
     that are created as part of the mapping (eg organisations, locations, etc).</span></li>
 
-    <li class="c15 c0"><span>The Joinup XSLT is quite ambiguous on the type of data-links available
+    <li class="c15 c0"><span>The GeoDCAT-ap XSLT is quite ambiguous on the type of data-links available
     in the metadata. The reason is that INSPIRE metadata does not require to indicate the type of
     resource behind a link and XSLT has no capabilities to probe a link, to derive the type of
     resource. The dutch metadata profile however requires data providers to indicate the type of
@@ -2399,7 +2403,7 @@ h6 {
   The html is annotated with schema.org microdata. A leaflet map view is added which displays the
   bounds of the dataset and, if available, a WMS GetMap request is added as a map overlay. Links
   are provided to alternative representations of the metadata in either xml (ISO 19139) or rdf/xml
-  (GeoDCAT-AP). If available, a link to a WFS and a link to the same WFS via ldproxy are
+  (GeoDCAT-ap). If available, a link to a WFS and a link to the same WFS via ldproxy are
   provided.</span></p>
 
   <h3 class="c0 c99 c12 c20" id="h.e9dcijtjp7dr"><span style=
@@ -2408,12 +2412,12 @@ h6 {
   "width: 374.50px; height: 318.10px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
   title="" /></span></h3>
 
-  <h3 class="c0 c12" id="h.uxa5cigy6l04"><span>RDF/XM</span><span>L</span></h3>
+  <h3 class="c0 c12" id="h.uxa5cigy6l04"><span>RDF/XML</span></h3>
 
   <p class="c0"><span>When using an accept-header application/xml+rdf or an explicit url
   /dcat/{uuid} a document encoded as rdf/xml will be returned by the service. The rdf/xml is
-  structured as GeoDCAT-AP, &nbsp;using a transformation from ISO 19139 using a modified XSLT
-  provided by the joinup GeoDCAT-AP initiative.</span></p>
+  structured as GeoDCAT-ap, &nbsp;using a transformation from ISO 19139 using a modified XSLT
+  provided by the GeoDCAT-ap initiative.</span></p>
 
   <h3 class="c0 c12" id="h.9tisvud3jjec"><span>JSON-LD</span></h3>
 
@@ -3875,7 +3879,7 @@ id=3a97fbe4-2b0d-4e9c-9644-276883400dd7</a></span>.</p>
 
       <tr class="c13">
         <td class="c31" colspan="1" rowspan="1">
-          <p class="c22 c0"><span class="c34 c29">ISO 19139 to GeoDCAT-AP mapping</span></p>
+          <p class="c22 c0"><span class="c34 c29">ISO 19139 to GeoDCAT-ap mapping</span></p>
         </td>
 
         <td class="c42" colspan="1" rowspan="1">
@@ -4311,7 +4315,7 @@ id=3a97fbe4-2b0d-4e9c-9644-276883400dd7</a></span>.</p>
   https://github.com/interactive-instruments/ldproxy/issues/9</a></span><span>.</span></p>
 
   <h1 class="c0 c12" id="h.hx52qgd16l66"><span>Appendix C: Example of an ISO 19139 document
-  transformed to GeoDCAT-AP</span></h1>
+  transformed to GeoDCAT-ap</span></h1>
 
   <p class="c0"><span class="c9">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
 
